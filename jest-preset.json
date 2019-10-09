@@ -28,5 +28,6 @@
   "testURL": "http://localhost",
   "transformIgnorePatterns": [
     "node_modules/(?!@ngrx)"
-  ]
+  ],
+  "reporters": ["jest-junit"]
 }
