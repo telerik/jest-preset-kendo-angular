@@ -34,4 +34,4 @@ jobs:
       run: |
         git reset --hard HEAD
         git checkout "${GITHUB_REF:11}"
-        TRAVIS_BRANCH="${GITHUB_REF:11}" npm run semantic-release
+        GITHUB_ACTION=true npm run semantic-release
