@@ -28,11 +28,11 @@ jobs:
     steps:
       - IN: kendo-angular-jest-preset-repo
         switch: off
-      - IN: kendo-angular-jest-preset_ciRepo
+      - IN: shippable-angular-jest-preset-push
         switch: off
       - TASK:
           name: kendo-angular-jest-preset-publish_develop
           script:
-            - ssh-add $KENDOANGULARJESTPRESETREPO_KEYPATH
+            - ssh-add $SHIPPABLEANGULARJESTPRESETPUSH_PRIVATE_KEY_PATH
             - cd $KENDOANGULARJESTPRESETREPO_STATE && git remote set-url --push origin git@github.com:telerik/kendo-angular-jest-preset.git && git checkout master && git pull --rebase
             - npm install @telerik/semantic-prerelease@1 --no-save && npx release-master
