@@ -22,6 +22,9 @@ resources:
       versionTemplate:
         sourceName:       telerik/kendo-angular-jest-preset
         branch:           develop
+    - name: shippable-angular-jest-preset-push
+      type: integration
+      integration: shippable-angular-jest-preset
 jobs:
   - name: kendo-angular-jest-preset-publish_develop_as_latest
     type: runSh
