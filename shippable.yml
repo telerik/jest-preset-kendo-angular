@@ -28,8 +28,6 @@ jobs:
     steps:
       - IN: kendo-angular-jest-preset-repo
         switch: off
-      - IN: kendo-angular-jest-preset_ciRepo
-        switch: off
       - TASK:
           name: kendo-angular-jest-preset-publish_develop
           script:
