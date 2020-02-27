@@ -34,5 +34,5 @@ jobs:
           name: kendo-angular-jest-preset-publish_develop
           script:
             - ssh-add $KENDOANGULARJESTPRESETREPO_KEYPATH
-            - cd $KENDOANGULARJESTPRESETREPO_STATE && git checkout master && git pull --rebase
+            - cd $KENDOANGULARJESTPRESETREPO_STATE && git remote set-url --push origin git@github.com:telerik/kendo-angular-jest-preset.git && git checkout master && git pull --rebase
             - npm install @telerik/semantic-prerelease@1 --no-save && npx release-master
