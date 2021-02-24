@@ -22,7 +22,10 @@ getTestBed().initTestEnvironment(
   BrowserDynamicTestingModule,
   platformBrowserDynamicTesting()
 );
-
+//Ensures no hollow tests are present
+afterEach(() => {
+    expect.hasAssertions();
+});
 expect.addSnapshotSerializer(HTMLCommentSerializer);
 expect.addSnapshotSerializer(AngularSnapshotSerializer);
 
